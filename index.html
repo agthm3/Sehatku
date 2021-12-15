@@ -18,10 +18,9 @@
   <body>
     <div class="page-dashboard">
       <div class="d-flex" id="wrapper" data-aos="fade-right">
-        <!--Page Content-->
         <div id="page-content-wrapper">
-          <!--Section Content-->
           <div class="row">
+            <!-- sintak logo KKRI, yang berada di ujung kiri atas -->
             <div class="col-lg-12">
               <img
                 src="/images/kkri-logo.png"
@@ -35,10 +34,13 @@
           <div class="dashboard-content">
             <div class="row">
               <div class="col-lg-7 text-center">
+                <!-- kodingan logo SEHATKU -->
                 <img class="mb-5" src="/images/sehatku-logo.png" alt="" />
+
                 <div class="row">
                   <div class="col-lg-3" id="buttonNonLogin">
                     <!-- dibawah ini adalah tombol untuk navbar -->
+                    <!-- Kodingan Tombol konsultasi -->
                     <a href="#"
                       ><img
                         src="/images/konsultasi-logo.png"
@@ -48,6 +50,7 @@
                     </a>
                   </div>
                   <div class="col-lg-3">
+                    <!-- sintak tombol janji temu -->
                     <a href="">
                       <img
                         onclick="nonLogin()"
@@ -56,6 +59,7 @@
                     /></a>
                   </div>
                   <div class="col-lg-3">
+                    <!-- sintak tombol daftar harga -->
                     <a href="#"
                       ><img
                         onclick="nonLogin()"
@@ -64,6 +68,7 @@
                     /></a>
                   </div>
                   <div class="col-lg-3">
+                    <!-- sintak tombol stok obat -->
                     <a href="#"
                       ><img
                         onclick="nonLogin()"
@@ -92,6 +97,7 @@
 
                   <!-- yang dibawah ini akan hilang, ketika function dijalankan (idnya: hasil) -->
                   <div class="col-lg-12" id="hasil">
+                    <!-- sintak untuk tombol masuk -->
                     <div class="mb-5" style="color: red"></div>
                     <a href="sehatku-login.html" class="card btn-login">
                       <div class="card-body">
@@ -101,6 +107,7 @@
                   </div>
 
                   <div class="col-lg-12">
+                    <!-- sintak untuk tombol buat akun di halaman index (home) -->
                     <a href="sehatku-login.html" class="card mt-3 btn-login">
                       <div class="card-body">
                         <img src="/images/buat-akun-teks.png" alt="" />
@@ -122,10 +129,15 @@
     <script src="/vendor/jquery/jquery.slim.min.js"></script>
     <script src="/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
     <script>
+      // ketika tombol yang kami berikan nama funciton nonLogin() diklik, maka function dibawah akan dieksekusi
       function nonLogin() {
         var x = document.getElementById("hasil");
         var y = document.getElementById("muncul");
+        // kami menggunakaan conditional statement untuk mengecek apakah x, yang dimana x adalah tombol id:hasil, akan disembunyikan menggunkan sintak
+        // style.display = "none", dan kodingan yang sebelumnya disembunyikan yaitu teks "Buat Akun Anda Terlebih Dahulu", akan muncul dikarenakan sintak
+        // y.style.display = "block" akan dieksekusi
         if (x.style.display === "none") {
           x.style.display = "block";
         } else {
