@@ -1,0 +1,220 @@
+.page-dashboard {
+  #page-content-wrapper {
+    background: #336198;
+    min-width: 100vw;
+    position: relative;
+  }
+
+  #sidebar-wrapper {
+    margin-top: 60px;
+    min-height: 100vh;
+    margin-left: -15rem;
+    transition: margin 0.25s ease-out;
+
+    .sidebar-heading {
+      padding: 0.875rem 1.25rem;
+      font-size: 1.2rem;
+    }
+
+    .list-group {
+      width: 15rem;
+    }
+  }
+
+  .pop-up-login {
+    width: 466px;
+    height: 507px !important;
+    background: rgba(black, 0.5);
+    font-size: 28px;
+    font-weight: bold;
+    text-align: left;
+    color: white;
+    border-radius: 40px;
+    position: absolute;
+    margin-left: 600px;
+    margin-top: 90px;
+    text-align: center;
+    z-index: 8;
+  }
+  .konsultasi-card {
+    margin-left: 400px;
+  }
+  .form-login {
+    position: absolute;
+    z-index: 9;
+  }
+
+  .form-username {
+    position: absolute;
+    z-index: 9;
+    .form-control {
+      width: 200px !important;
+      margin-left: 100px;
+    }
+  }
+
+  .btn-next {
+    background-color: #0acdf8;
+    width: 80px !important;
+    height: 30px !important;
+    text-align: center;
+    border: 2px solid white;
+    border-radius: 60px;
+    margin-bottom: 30px;
+    margin-left: 150px;
+    margin-top: 400px;
+    p {
+      margin-bottom: 90px;
+      font-weight: bold;
+      color: white;
+      margin-top: -5px;
+    }
+  }
+
+  .btn-login {
+    border-radius: 30px !important;
+    background-color: #03a9f4;
+    color: red;
+    font-family: "Roboto Slab";
+    font-weight: bold;
+    font-size: x-large;
+    width: 300px;
+    height: 50px;
+    border-color: 1px white;
+    margin-left: 350px;
+
+    img {
+      margin-bottom: 60px;
+      margin-top: -9px;
+    }
+  }
+
+  #wrapper {
+    &.toggled {
+      #sidebar-wrapper {
+        margin-left: 0;
+      }
+    }
+  }
+  .navbar-store {
+    margin-top: 0;
+    background-color: #f5f5fb;
+    box-shadow: 0px 4px 5px #cacad1;
+    @include media-breakpoint-up(md) {
+      background-color: transparent;
+      box-shadow: none;
+    }
+  }
+
+  .list-group-item {
+    border: 0;
+    font-size: 16px;
+    color: #c5c5c5;
+
+    &.active {
+      background: linear-gradient(
+        270deg,
+        rgba(255, 113, 88, 0.32) 2%,
+        rgba(255, 255, 255, 0) 100%
+      );
+
+      border-right: 4px solid #ff7158;
+      color: #0c0d36;
+    }
+  }
+
+  @include media-breakpoint-up(md) {
+    #sidebar-wrapper {
+      margin-left: 0;
+      margin-top: 0px;
+    }
+
+    #page-content-wrapper {
+      min-width: 0;
+      width: 100%;
+    }
+
+    #wrapper {
+      &.toggled {
+        #sidebar-wrapper {
+          margin-left: -15rem;
+        }
+      }
+    }
+  }
+
+  .section-content {
+    margin-top: 100px;
+
+    @include media-breakpoint-up(md) {
+      margin-top: 20px;
+      margin-left: 20px;
+    }
+
+    h5 {
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 27px;
+      /* identical to box height */
+
+      color: #0c0d36;
+    }
+
+    .dashboard-card-title {
+      font-size: 24px;
+      line-height: 36px;
+      /* identical to box height */
+
+      color: #0c0d36;
+    }
+
+    .dashboard-card-subtitle {
+      font-weight: 600;
+      font-size: 32px;
+      /* identical to box height */
+
+      color: #0c0d36;
+    }
+
+    .product-title {
+      font-weight: normal;
+      font-size: 18px;
+      line-height: 27px;
+
+      color: #c5c5c5;
+    }
+
+    .product-subtitle {
+      font-weight: normal;
+      font-size: 18px;
+      color: #0c0d36;
+      margin-bottom: 20px;
+    }
+
+    .nav-pills {
+      .nav-link {
+        font-weight: normal;
+        font-size: 18px;
+        color: #9191a9;
+        border-radius: 0;
+
+        &.active {
+          font-weight: 500;
+          font-size: 18px;
+          color: #0c0d36;
+          border-bottom: 2px solid #0c0d36;
+          background: none;
+        }
+      }
+    }
+
+    .gallery-container {
+      .delete-gallery {
+        display: block;
+        position: absolute;
+        top: -10px;
+        right: 0;
+      }
+    }
+  }
+}
